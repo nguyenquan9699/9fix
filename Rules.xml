@@ -589,12 +589,12 @@
 		<briefDescription>Untrusted query string </briefDescription>
 		<explanation>The Android application exports a component for use by other applications, but does not properly restrict which applications can launch the component or access the data it contains. </explanation>
 		<priority>5</priority>
-		<XMLTag> </XMLTag>
-		<XMLAttribute>exported</XMLAttribute>
-		<XMLAttributeValue>true</XMLAttributeValue>
+		<className> </className>
+		<methodName>exported</methodName>
+		<paramPattern>true</paramPattern>
 		<paramIndex> </paramIndex>
 		<needFix>1</needFix>
-		<fixName>Change to android:exported="false" </fixName>
+		<fixName>Change to android:exported="false"</fixName>
 		<fixOld>true</fixOld>
 		<fixNew>false</fixNew>
 		<type>4</type>
