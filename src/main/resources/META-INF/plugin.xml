@@ -1,0 +1,50 @@
+<idea-plugin>
+    <id>org.jetbrains.plugins.ninefix</id>
+    <name>9Fix</name>
+    <vendor>Computer Security Club - University of Science, HCM</vendor>
+    <description><![CDATA[
+        <span>Plugin for code static analysis which can help users avoiding some common vulnerabilities. It will analyze your project, find security bugs and create a quick fix step for you.</span><br>
+        <img src="https://raw.githubusercontent.com/nguyenquan9699/9fix/main/quickfix.png"><br>
+        <span>It is always enabled when you open a project.</span><br>
+        <span>Going to </span><b>Code | Rules editor</b><span> to edit our rules or add your own.</span><br>
+        <img src="https://raw.githubusercontent.com/nguyenquan9699/9fix/main/editrules.png">
+    ]]></description>
+    <!-- Product and plugin compatibility requirements -->
+    <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.androidstudio</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>org.jetbrains.android</depends>
+    <depends>org.jetbrains.kotlin</depends>
+
+    <applicationListeners>
+        <listener class="org.jetbrains.plugins.ninefix.listeners.MyProjectManagerListener"
+            topic="com.intellij.openapi.project.ProjectManagerListener"/>
+    </applicationListeners>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <projectService serviceImplementation="org.jetbrains.plugins.ninefix.services.MyProjectService"/>
+
+        <globalInspection shortName="ConstructorInspection" displayName="Constructor Inspection"
+            enabledByDefault="true" level="WARNING"
+            implementationClass="org.jetbrains.plugins.ninefix.inspection.ConstructorInspection"/>
+        <globalInspection shortName="ConstructorParamInspection" displayName="Constructor Parameter Inspection"
+            enabledByDefault="true" level="WARNING"
+            implementationClass="org.jetbrains.plugins.ninefix.inspection.ConstructorParamInspection"/>
+        <globalInspection shortName="MethodInspection" displayName="Method Inspection"
+            enabledByDefault="true" level="WARNING"
+            implementationClass="org.jetbrains.plugins.ninefix.inspection.MethodInspection"/>
+        <globalInspection shortName="MethodParamInspection" displayName="Method Parameter Inspection"
+            enabledByDefault="true" level="WARNING"
+            implementationClass="org.jetbrains.plugins.ninefix.inspection.MethodParamInspection"/>
+    </extensions>
+
+    <actions>
+        <action id="org.intellij.sdk.action.RulesEditorAction" class="org.jetbrains.plugins.ninefix.actions.RulesEditorAction"
+            text="Rules editor" description="9Fix Plugin: Click to edit inspection rules">
+            <add-to-group group-id="CodeMenu" anchor="first"/>
+            <keyboard-shortcut first-keystroke="control alt A" second-keystroke="9" keymap="$default"/>
+            <mouse-shortcut keystroke="control button3 doubleClick" keymap="$default"/>
+        </action>
+    </actions>
+</idea-plugin>
