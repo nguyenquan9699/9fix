@@ -156,7 +156,7 @@
 		<priority>5</priority>
 		<className>javax.crypto.Cipher</className>
 		<methodName>getInstance</methodName>
-		<paramPattern>(DES)</paramPattern>
+		<paramPattern>(.*DES[^\/].*)</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>1</needFix>
 		<fixName>Improve security by using AES/GCM/NoPadding</fixName>
@@ -171,7 +171,7 @@
 		<priority>5</priority>
 		<className>javax.crypto.Cipher</className>
 		<methodName>getInstance</methodName>
-		<paramPattern>(DESede)</paramPattern>
+		<paramPattern>(.*DESede[^\/].*)</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>1</needFix>
 		<fixName>Improve security by using AES/GCM/NoPadding</fixName>
@@ -186,7 +186,7 @@
 		<priority>5</priority>
 		<className>javax.crypto.Cipher</className>
 		<methodName>getInstance</methodName>
-		<paramPattern>(RC2)</paramPattern>
+		<paramPattern>(.*RC2.*)</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>1</needFix>
 		<fixName>Improve security by using AES/GCM/NoPadding</fixName>
@@ -201,7 +201,7 @@
 		<priority>5</priority>
 		<className>javax.crypto.Cipher</className>
 		<methodName>getInstance</methodName>
-		<paramPattern>(RC4)</paramPattern>
+		<paramPattern>(.*RC4.*)</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>1</needFix>
 		<fixName>Improve security by using AES/GCM/NoPadding</fixName>
@@ -216,7 +216,7 @@
 		<priority>5</priority>
 		<className>javax.crypto.Cipher</className>
 		<methodName>getInstance</methodName>
-		<paramPattern>(Blowfish)</paramPattern>
+		<paramPattern>(.*Blowfish.*)</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>1</needFix>
 		<fixName>Improve security by using AES/GCM/NoPadding</fixName>
@@ -257,7 +257,7 @@
 	<rule>
 		<ID>KeyInit</ID>
 		<briefDescription>Cryptographic keys should be rubust</briefDescription>
-		<explanation>Key length should be >= 128</explanation>
+		<explanation>Key lenght should be >= 128</explanation>
 		<priority>5</priority>
 		<className>java.security.KeyGenerator</className>
 		<methodName>init</methodName>
@@ -351,7 +351,7 @@
 		<priority>5</priority>
 		<className>javax.net.ssl.SSLContext</className>
 		<methodName>getInstance</methodName>
-		<paramPattern>(SSLv3)</paramPattern>
+		<paramPattern>(.*SSLv3.*)</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>1</needFix>
 		<fixName>Improve security by using TLSv1.2</fixName>
@@ -381,7 +381,7 @@
 		<priority>5</priority>
 		<className>java.security.MessageDigest</className>
 		<methodName>getInstance</methodName>
-		<paramPattern>(SHA1)</paramPattern>
+		<paramPattern>(.*SHA1.*)</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>1</needFix>
 		<fixName>Improve security by using SHA256</fixName>
@@ -590,7 +590,7 @@
 		<explanation>The Android application exports a component for use by other applications, but does not properly restrict which applications can launch the component or access the data it contains.</explanation>
 		<priority>5</priority>
 		<className></className>
-		<methodName>android:exported</methodName>
+		<methodName>exported</methodName>
 		<paramPattern>true</paramPattern>
 		<paramIndex></paramIndex>
 		<needFix>1</needFix>
