@@ -242,7 +242,7 @@
 	<rule>
 		<ID>KeyPairInit</ID>
 		<briefDescription>Cryptographic keys should be rubust</briefDescription>
-		<explanation> Key lenght should be >= 2048</explanation>
+		<explanation>Key lenght should be >= 2048</explanation>
 		<priority>5</priority>
 		<className>java.security.KeyPairGenerator</className>
 		<methodName>initialize</methodName>
@@ -257,7 +257,7 @@
 	<rule>
 		<ID>KeyInit</ID>
 		<briefDescription>Cryptographic keys should be rubust</briefDescription>
-		<explanation> Key lenght should be >= 128</explanation>
+		<explanation>Key length should be >= 128</explanation>
 		<priority>5</priority>
 		<className>java.security.KeyGenerator</className>
 		<methodName>init</methodName>
@@ -272,10 +272,10 @@
 	<rule>
 		<ID>ECGenParameterSpec</ID>
 		<briefDescription>Cryptographic keys should be rubust</briefDescription>
-		<explanation> Cryptographic keys should be rubust</explanation>
+		<explanation>Cryptographic keys should be rubust</explanation>
 		<priority>5</priority>
 		<className>java.security.spec.ECGenParameterSpec</className>
-		<methodName> </methodName>
+		<methodName></methodName>
 		<paramPattern>(secp112r1)</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>1</needFix>
@@ -287,7 +287,7 @@
 	<rule>
 		<ID>DriverManagerGetConnection</ID>
 		<briefDescription>A secure password should be used when connecting to a database</briefDescription>
-		<explanation> A secure password should be used when connecting to a database</explanation>
+		<explanation>A secure password should be used when connecting to a database</explanation>
 		<priority>5</priority>
 		<className>java.sql.DriverManager</className>
 		<methodName>getConnection</methodName>
@@ -302,11 +302,11 @@
 	<rule>
 		<ID>PasswordEncoder</ID>
 		<briefDescription>Passwords should not be stored in plain-text or with a fast hashing algorithm</briefDescription>
-		<explanation> Passwords should not be stored in plain-text or with a fast hashing algorithm</explanation>
+		<explanation>Passwords should not be stored in plain-text or with a fast hashing algorithm</explanation>
 		<priority>5</priority>
 		<className>org.springframework.security.crypto.password.StandardPasswordEncoder</className>
-		<methodName> </methodName>
-		<paramPattern> </paramPattern>
+		<methodName></methodName>
+		<paramPattern></paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>1</needFix>
 		<fixName>Improve security</fixName>
@@ -317,10 +317,10 @@
 	<rule>
 		<ID>SecureRandomSeed</ID>
 		<briefDescription>"SecureRandom" seeds should not be predictable</briefDescription>
-		<explanation> "SecureRandom" seeds should not be predictable</explanation>
+		<explanation>"SecureRandom" seeds should not be predictable</explanation>
 		<priority>5</priority>
 		<className>java.security.SecureRandom</className>
-		<methodName> </methodName>
+		<methodName></methodName>
 		<paramPattern>(.*)</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>1</needFix>
@@ -332,16 +332,16 @@
 	<rule>
 		<ID>SecureRandomSeed</ID>
 		<briefDescription>"SecureRandom" seeds should not be predictable</briefDescription>
-		<explanation> "SecureRandom" seeds should not be predictable</explanation>
+		<explanation>"SecureRandom" seeds should not be predictable</explanation>
 		<priority>5</priority>
 		<className>java.security.SecureRandom</className>
-		<methodName> </methodName>
+		<methodName></methodName>
 		<paramPattern>(.*setSeed.*)</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>1</needFix>
 		<fixName>Improve security</fixName>
 		<fixOld>(.*setSeed.*)</fixOld>
-		<fixNew> </fixNew>
+		<fixNew></fixNew>
 		<type>0</type>
 	</rule>
 	<rule>
@@ -349,7 +349,7 @@
 		<briefDescription>Weak SSL/TLS protocols should not be used</briefDescription>
 		<explanation>Weak SSL/TLS protocols should not be used</explanation>
 		<priority>5</priority>
-		<className>javax.net.ssl.SSLContext </className>
+		<className>javax.net.ssl.SSLContext</className>
 		<methodName>getInstance</methodName>
 		<paramPattern>(SSLv3)</paramPattern>
 		<paramIndex>0</paramIndex>
@@ -365,13 +365,13 @@
 		<explanation>NullCipher should not be used</explanation>
 		<priority>5</priority>
 		<className>javax.crypto.NullCipher</className>
-		<methodName> </methodName>
-		<paramPattern> </paramPattern>
+		<methodName></methodName>
+		<paramPattern></paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>0</needFix>
-		<fixName> </fixName>
-		<fixOld> </fixOld>
-		<fixNew> </fixNew>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
 		<type>2</type>
 	</rule>
 	<rule>
@@ -429,170 +429,170 @@
 		<paramPattern>^.*\+.*$</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>0</needFix>
-		<fixName> </fixName>
-		<fixOld> </fixOld>
-		<fixNew> </fixNew>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
 		<type>1</type>
 	</rule>
 	<rule>
 		<ID>UNTRUSTED_SERVLET_CONTENT_TYPE</ID>
-		<briefDescription>Untrusted Content-Type header </briefDescription>
+		<briefDescription>Untrusted Content-Type header</briefDescription>
 		<explanation>The HTTP header Content-Type can be controlled by the client. You may need to validate or sanitize those values before passing them to sensitive APIs</explanation>
 		<priority>5</priority>
 		<className>javax.servlet.http.HttpServletRequest</className>
 		<methodName>getContentType</methodName>
-		<paramPattern> </paramPattern>
-		<paramIndex> </paramIndex>
+		<paramPattern></paramPattern>
+		<paramIndex></paramIndex>
 		<needFix>0</needFix>
-		<fixName> </fixName>
-		<fixOld> </fixOld>
-		<fixNew> </fixNew>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
 		<type>0</type>
 	</rule>
 	<rule>
 		<ID>UNTRUSTED_SERVLET_CONTENT_TYPE (HttpServletRequestWrapper)</ID>
-		<briefDescription>Untrusted Content-Type header </briefDescription>
+		<briefDescription>Untrusted Content-Type header</briefDescription>
 		<explanation>The HTTP header Content-Type can be controlled by the client. You may need to validate or sanitize those values before passing them to sensitive APIs</explanation>
 		<priority>5</priority>
 		<className>javax.servlet.http.HttpServletRequestWrapper</className>
 		<methodName>getContentType</methodName>
-		<paramPattern> </paramPattern>
-		<paramIndex> </paramIndex>
+		<paramPattern></paramPattern>
+		<paramIndex></paramIndex>
 		<needFix>0</needFix>
-		<fixName> </fixName>
-		<fixOld> </fixOld>
-		<fixNew> </fixNew>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
 		<type>0</type>
 	</rule>
 	<rule>
 		<ID>UNTRUSTED_SERVLET_SERVER_NAME</ID>
-		<briefDescription>Untrusted Hostname header </briefDescription>
+		<briefDescription>Untrusted Hostname header</briefDescription>
 		<explanation>The hostname header can be controlled by the client. You may need to validate or sanitize those values before passing them to sensitive APIs.</explanation>
 		<priority>5</priority>
 		<className>javax.servlet.http.HttpServletRequest</className>
 		<methodName>getServerName</methodName>
-		<paramPattern> </paramPattern>
-		<paramIndex> </paramIndex>
+		<paramPattern></paramPattern>
+		<paramIndex></paramIndex>
 		<needFix>0</needFix>
-		<fixName> </fixName>
-		<fixOld> </fixOld>
-		<fixNew> </fixNew>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
 		<type>0</type>
 	</rule>
 	<rule>
 		<ID>UNTRUSTED_SERVLET_SERVER_NAME (HttpServletRequestWrapper)</ID>
-		<briefDescription>Untrusted Hostname header </briefDescription>
+		<briefDescription>Untrusted Hostname header</briefDescription>
 		<explanation>The hostname header can be controlled by the client. You may need to validate or sanitize those values before passing them to sensitive APIs.</explanation>
 		<priority>5</priority>
 		<className>javax.servlet.http.HttpServletRequestWrapper</className>
 		<methodName>getServerName</methodName>
-		<paramPattern> </paramPattern>
-		<paramIndex> </paramIndex>
+		<paramPattern></paramPattern>
+		<paramIndex></paramIndex>
 		<needFix>0</needFix>
-		<fixName> </fixName>
-		<fixOld> </fixOld>
-		<fixNew> </fixNew>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
 		<type>0</type>
 	</rule>
 	<rule>
 		<ID>UNTRUSTED_SERVLET_SESSION_ID</ID>
-		<briefDescription>Untrusted session cookie value </briefDescription>
+		<briefDescription>Untrusted session cookie value</briefDescription>
 		<explanation>The value can be altered by the client. The following HTTP request illustrates the potential modification.</explanation>
 		<priority>5</priority>
 		<className>javax.servlet.http.HttpServletRequest</className>
 		<methodName>getSession</methodName>
-		<paramPattern> </paramPattern>
-		<paramIndex> </paramIndex>
+		<paramPattern></paramPattern>
+		<paramIndex></paramIndex>
 		<needFix>0</needFix>
-		<fixName> </fixName>
-		<fixOld> </fixOld>
-		<fixNew> </fixNew>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
 		<type>0</type>
 	</rule>
 	<rule>
 		<ID>UNTRUSTED_SERVLET_SESSION_ID (HttpServletRequestWrapper)</ID>
-		<briefDescription>Untrusted session cookie value </briefDescription>
+		<briefDescription>Untrusted session cookie value</briefDescription>
 		<explanation>The value can be altered by the client. The following HTTP request illustrates the potential modification.</explanation>
 		<priority>5</priority>
 		<className>javax.servlet.http.HttpServletRequestWrapper</className>
 		<methodName>getSession</methodName>
-		<paramPattern> </paramPattern>
-		<paramIndex> </paramIndex>
+		<paramPattern></paramPattern>
+		<paramIndex></paramIndex>
 		<needFix>0</needFix>
-		<fixName> </fixName>
-		<fixOld> </fixOld>
-		<fixNew> </fixNew>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
 		<type>0</type>
 	</rule>
 	<rule>
 		<ID>UNTRUSTED_SERVLET_SESSION_ID</ID>
-		<briefDescription>Untrusted session cookie value </briefDescription>
+		<briefDescription>Untrusted session cookie value</briefDescription>
 		<explanation>The value can be altered by the client. The following HTTP request illustrates the potential modification.</explanation>
 		<priority>5</priority>
 		<className>javax.servlet.http.HttpServletRequest</className>
 		<methodName>getRequestedSessionId</methodName>
-		<paramPattern> </paramPattern>
-		<paramIndex> </paramIndex>
+		<paramPattern></paramPattern>
+		<paramIndex></paramIndex>
 		<needFix>0</needFix>
-		<fixName> </fixName>
-		<fixOld> </fixOld>
-		<fixNew> </fixNew>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
 		<type>0</type>
 	</rule>
 	<rule>
 		<ID>UNTRUSTED_SERVLET_SESSION_ID (HttpServletRequestWrapper)</ID>
-		<briefDescription>Untrusted session cookie value </briefDescription>
+		<briefDescription>Untrusted session cookie value</briefDescription>
 		<explanation>The value can be altered by the client. The following HTTP request illustrates the potential modification.</explanation>
 		<priority>5</priority>
 		<className>javax.servlet.http.HttpServletRequestWrapper</className>
 		<methodName>getRequestedSessionId</methodName>
-		<paramPattern> </paramPattern>
-		<paramIndex> </paramIndex>
+		<paramPattern></paramPattern>
+		<paramIndex></paramIndex>
 		<needFix>0</needFix>
-		<fixName> </fixName>
-		<fixOld> </fixOld>
-		<fixNew> </fixNew>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
 		<type>0</type>
 	</rule>
 	<rule>
 		<ID>UNTRUSTED_SERVLET_QUERY_STRING</ID>
-		<briefDescription>Untrusted query string </briefDescription>
+		<briefDescription>Untrusted query string</briefDescription>
 		<explanation>You may need to validate or sanitize anything pulled from the query string before passing it to sensitive APIs.</explanation>
 		<priority>5</priority>
 		<className>javax.servlet.http.HttpServletRequest</className>
 		<methodName>getQueryString</methodName>
-		<paramPattern> </paramPattern>
-		<paramIndex> </paramIndex>
+		<paramPattern></paramPattern>
+		<paramIndex></paramIndex>
 		<needFix>0</needFix>
-		<fixName> </fixName>
-		<fixOld> </fixOld>
-		<fixNew> </fixNew>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
 		<type>0</type>
 	</rule>
 	<rule>
 		<ID>UNTRUSTED_SERVLET_QUERY_STRING (HttpServletRequestWrapper)</ID>
-		<briefDescription>Untrusted query string </briefDescription>
+		<briefDescription>Untrusted query string</briefDescription>
 		<explanation>You may need to validate or sanitize anything pulled from the query string before passing it to sensitive APIs.</explanation>
 		<priority>5</priority>
 		<className>javax.servlet.http.HttpServletRequestWrapper</className>
 		<methodName>getQueryString</methodName>
-		<paramPattern> </paramPattern>
-		<paramIndex> </paramIndex>
+		<paramPattern></paramPattern>
+		<paramIndex></paramIndex>
 		<needFix>0</needFix>
-		<fixName> </fixName>
-		<fixOld> </fixOld>
-		<fixNew> </fixNew>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
 		<type>0</type>
 	</rule>
 	<rule>
 		<ID>Android Exported Component</ID>
-		<briefDescription>Untrusted query string </briefDescription>
-		<explanation>The Android application exports a component for use by other applications, but does not properly restrict which applications can launch the component or access the data it contains. </explanation>
+		<briefDescription>Untrusted query string</briefDescription>
+		<explanation>The Android application exports a component for use by other applications, but does not properly restrict which applications can launch the component or access the data it contains.</explanation>
 		<priority>5</priority>
-		<className> </className>
-		<methodName>exported</methodName>
+		<className></className>
+		<methodName>android:exported</methodName>
 		<paramPattern>true</paramPattern>
-		<paramIndex> </paramIndex>
+		<paramIndex></paramIndex>
 		<needFix>1</needFix>
 		<fixName>Change to android:exported="false"</fixName>
 		<fixOld>true</fixOld>
