@@ -395,9 +395,9 @@
 		<explanation>The use of a predictable random value can lead to vulnerabilities</explanation>
 		<priority>5</priority>
 		<className>java.util.Random</className>
-		<methodName>empty</methodName>
-		<paramPattern>empty</paramPattern>
-		<paramIndex>empty</paramIndex>
+		<methodName></methodName>
+		<paramPattern></paramPattern>
+		<paramIndex></paramIndex>
 		<needFix>1</needFix>
 		<fixName>Use SecureRandom</fixName>
 		<fixOld>Random[^~]*Random[(][)]</fixOld>
@@ -410,7 +410,7 @@
 		<explanation>A path traversal attack (also known as directory traversal) aims to access files and directories that are stored outside the root folder</explanation>
 		<priority>5</priority>
 		<className>java.io.File</className>
-		<methodName>empty</methodName>
+		<methodName></methodName>
 		<paramPattern>(^\".*\"$)</paramPattern>
 		<paramIndex>1</paramIndex>
 		<needFix>1</needFix>
@@ -585,7 +585,7 @@
 		<type>0</type>
 	</rule>
 	<rule>
-		<ID>Android Exported Component</ID>
+		<ID>AndroidExportedComponent</ID>
 		<briefDescription>Untrusted query string</briefDescription>
 		<explanation>The Android application exports a component for use by other applications, but does not properly restrict which applications can launch the component or access the data it contains.</explanation>
 		<priority>5</priority>
@@ -598,5 +598,80 @@
 		<fixOld>true</fixOld>
 		<fixNew>false</fixNew>
 		<type>4</type>
+	</rule>
+	<rule>
+		<ID>MissingUrlEncode</ID>
+		<briefDescription>Url should be encoded</briefDescription>
+		<explanation>Proper input sanitization can prevent insertion of malicious data into a subsystem such as a database</explanation>
+		<priority>5</priority>
+		<className>java.net.URL</className>
+		<methodName></methodName>
+		<paramPattern>^([^\(\)])*$</paramPattern>
+		<paramIndex>0</paramIndex>
+		<needFix>1</needFix>
+		<fixName>Use java.util.Base64 to encode and decode data</fixName>
+		<fixOld>\((.*?)\)</fixOld>
+		<fixNew>Base64.getUrlEncoder().encodeToString(${oldText}.getBytes())</fixNew>
+		<type>3</type>
+	</rule>
+	<rule>
+		<ID>ScriptEngineCodeInjection</ID>
+		<briefDescription>Potential Command Injection by Script Engine</briefDescription>
+		<explanation>Eval method with user input may trigger command injection</explanation>
+		<priority>10</priority>
+		<className>javax.script.ScriptEngine</className>
+		<methodName>eval</methodName>
+		<paramPattern>^.*\+.*$</paramPattern>
+		<paramIndex>0</paramIndex>
+		<needFix>0</needFix>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
+		<type>1</type>
+	</rule>
+	<rule>
+		<ID>XPathInjection</ID>
+		<briefDescription>Potential XPath Injection</briefDescription>
+		<explanation>The parameter in compile method should be whitelisted</explanation>
+		<priority>10</priority>
+		<className>javax.xml.xpath.XPath</className>
+		<methodName>compile</methodName>
+		<paramPattern>^.*\+.*$</paramPattern>
+		<paramIndex>0</paramIndex>
+		<needFix>0</needFix>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
+		<type>1</type>
+	</rule>
+	<rule>
+		<ID>PatternLoad</ID>
+		<briefDescription>Use double slashes for escape characters</briefDescription>
+		<explanation>Remember to use double slashes for escape characters.</explanation>
+		<priority>0</priority>
+		<className>java.util.regex.Pattern</className>
+		<methodName>compile</methodName>
+		<paramPattern></paramPattern>
+		<paramIndex></paramIndex>
+		<needFix>0</needFix>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
+		<type>0</type>
+	</rule>
+	<rule>
+		<ID>PreventArbitraryFileUpload</ID>
+		<briefDescription>Copy method may cause unsafe file upload</briefDescription>
+		<explanation>Metadata should be checked to prevent unsafe file upload</explanation>
+		<priority>10</priority>
+		<className>android.os.FileUtils</className>
+		<methodName>copy</methodName>
+		<paramPattern>(up)|(load)</paramPattern>
+		<paramIndex>0</paramIndex>
+		<needFix>0</needFix>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
+		<type>1</type>
 	</rule>
 </rules>
