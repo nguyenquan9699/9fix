@@ -666,12 +666,57 @@
 		<priority>10</priority>
 		<className>android.os.FileUtils</className>
 		<methodName>copy</methodName>
-		<paramPattern>(up)|(load)</paramPattern>
+		<paramPattern>(.*up.*)|(.*load.*)</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>0</needFix>
 		<fixName></fixName>
 		<fixOld></fixOld>
 		<fixNew></fixNew>
 		<type>1</type>
+	</rule>
+	<rule>
+		<ID>SensitiveCookie</ID>
+		<briefDescription>Sensitive information in cookie</briefDescription>
+		<explanation>Do not store unencrypted sensitive information on the client side</explanation>
+		<priority>5</priority>
+		<className>java.net.HttpCookie</className>
+		<methodName></methodName>
+		<paramPattern>(.*pass.*)|(.*pw.*)|(.*private.*)</paramPattern>
+		<paramIndex>1</paramIndex>
+		<needFix>0</needFix>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
+		<type>3</type>
+	</rule>
+	<rule>
+		<ID>ReadUnshared</ID>
+		<briefDescription>Use the serialization methods readUnshared() with care</briefDescription>
+		<explanation>readUnshared() may produce unexpected results when used for the round-trip serialization</explanation>
+		<priority>5</priority>
+		<className>java.io.ObjectInputStream</className>
+		<methodName>readUnshared</methodName>
+		<paramPattern></paramPattern>
+		<paramIndex></paramIndex>
+		<needFix>1</needFix>
+		<fixName>Use readObject() to ensure that the object referred to only one target</fixName>
+		<fixOld>readUnshared</fixOld>
+		<fixNew>readObject</fixNew>
+		<type>0</type>
+	</rule>
+	<rule>
+		<ID>WriteUnshared</ID>
+		<briefDescription>Use the serialization methods writeUnshared() with care</briefDescription>
+		<explanation>writeUnshared() may produce unexpected results when used for the round-trip serialization</explanation>
+		<priority>5</priority>
+		<className>java.io.ObjectOutputStream</className>
+		<methodName>writeUnshared</methodName>
+		<paramPattern></paramPattern>
+		<paramIndex></paramIndex>
+		<needFix>1</needFix>
+		<fixName>Use writeObject() to ensure that the object referred to only one target</fixName>
+		<fixOld>writeUnshared</fixOld>
+		<fixNew>writeObject</fixNew>
+		<type>0</type>
 	</rule>
 </rules>
