@@ -37,6 +37,9 @@
         <globalInspection shortName="MethodParamInspection" displayName="Method Parameter Inspection"
             enabledByDefault="true" level="WARNING"
             implementationClass="org.jetbrains.plugins.ninefix.inspection.MethodParamInspection"/>
+        <globalInspection shortName="XMLResourceInspection" displayName="Xml Resource Inspection"
+            enabledByDefault="true" level="WARNING"
+            implementationClass="org.jetbrains.plugins.ninefix.inspection.XMLResourceInspection"/>
     </extensions>
 
     <actions>

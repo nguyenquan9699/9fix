@@ -54,6 +54,8 @@ class MethodParamIssueDetector : Detector(), Detector.UastScanner {
                 continue
             val isInResources = context.evaluator.isMemberInClass(method, rule[Config.FIELD_className])
             if (rule[Config.FIELD_meThodName] == node.methodName && isInResources) {
+                if (node.valueArgumentCount - 1 < rule[Config.FIELD_paramIndex].toInt())
+                    continue
 
                 val param = node.getArgumentForParameter(rule[Config.FIELD_paramIndex].toInt())!!.sourcePsi!!.text
                 val reg = Regex(rule[Config.FIELD_paramPattern])

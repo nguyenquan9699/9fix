@@ -5,3 +5,7 @@
 ## [1.0.0]
 ### Added
 - The first version of 9Fix.
+
+## [1.0.1]
+### Changed
+- Fix XML bug.

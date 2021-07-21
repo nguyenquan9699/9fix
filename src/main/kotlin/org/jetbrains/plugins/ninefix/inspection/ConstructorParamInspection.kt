@@ -51,8 +51,10 @@ class ConstructorParamIssueDetector : Detector(), Detector.UastScanner {
         for (rule in rules) {
             if(node.valueArgumentCount == 0)
                 continue
-            if (rule[Config.FIELD_className].split('.').last() == constructor.name){
 
+            if (rule[Config.FIELD_className].split('.').last() == constructor.name){
+                if (node.valueArgumentCount - 1 < rule[Config.FIELD_paramIndex].toInt())
+                    continue
                 val param = node.getArgumentForParameter(rule[Config.FIELD_paramIndex].toInt())!!.sourcePsi!!.text
 
                 val reg = Regex(rule[Config.FIELD_paramPattern])
