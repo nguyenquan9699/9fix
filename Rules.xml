@@ -240,6 +240,81 @@
 		<type>1</type>
 	</rule>
 	<rule>
+		<ID>SensitiveDataLoggingW</ID>
+		<briefDescription>Sensitive data may be logged</briefDescription>
+		<explanation>Sensitve data such as password should not be logged</explanation>
+		<priority>5</priority>
+		<className>android.util.Log</className>
+		<methodName>w</methodName>
+		<paramPattern>(.*pass.*)|(.*pw.*)</paramPattern>
+		<paramIndex>1</paramIndex>
+		<needFix>0</needFix>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
+		<type>1</type>
+	</rule>
+	<rule>
+		<ID>SensitiveDataLoggingD</ID>
+		<briefDescription>Sensitive data may be logged</briefDescription>
+		<explanation>Sensitve data such as password should not be logged</explanation>
+		<priority>5</priority>
+		<className>android.util.Log</className>
+		<methodName>d</methodName>
+		<paramPattern>(.*pass.*)|(.*pw.*)</paramPattern>
+		<paramIndex>1</paramIndex>
+		<needFix>0</needFix>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
+		<type>1</type>
+	</rule>
+	<rule>
+		<ID>SensitiveDataLoggingE</ID>
+		<briefDescription>Sensitive data may be logged</briefDescription>
+		<explanation>Sensitve data such as password should not be logged</explanation>
+		<priority>5</priority>
+		<className>android.util.Log</className>
+		<methodName>e</methodName>
+		<paramPattern>(.*pass.*)|(.*pw.*)</paramPattern>
+		<paramIndex>1</paramIndex>
+		<needFix>0</needFix>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
+		<type>1</type>
+	</rule>
+	<rule>
+		<ID>SensitiveDataLoggingI</ID>
+		<briefDescription>Sensitive data may be logged</briefDescription>
+		<explanation>Sensitve data such as password should not be logged</explanation>
+		<priority>5</priority>
+		<className>android.util.Log</className>
+		<methodName>i</methodName>
+		<paramPattern>(.*pass.*)|(.*pw.*)</paramPattern>
+		<paramIndex>1</paramIndex>
+		<needFix>0</needFix>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
+		<type>1</type>
+	</rule>
+	<rule>
+		<ID>SensitiveDataLoggingV</ID>
+		<briefDescription>Sensitive data may be logged</briefDescription>
+		<explanation>Sensitve data such as password should not be logged</explanation>
+		<priority>5</priority>
+		<className>android.util.Log</className>
+		<methodName>v</methodName>
+		<paramPattern>(.*pass.*)|(.*pw.*)</paramPattern>
+		<paramIndex>1</paramIndex>
+		<needFix>0</needFix>
+		<fixName></fixName>
+		<fixOld></fixOld>
+		<fixNew></fixNew>
+		<type>1</type>
+	</rule>
+	<rule>
 		<ID>KeyPairInit</ID>
 		<briefDescription>Cryptographic keys should be rubust</briefDescription>
 		<explanation>Key lenght should be >= 2048</explanation>
@@ -586,7 +661,7 @@
 	</rule>
 	<rule>
 		<ID>AndroidExportedComponent</ID>
-		<briefDescription>Untrusted query string</briefDescription>
+		<briefDescription>Exported Component</briefDescription>
 		<explanation>The Android application exports a component for use by other applications, but does not properly restrict which applications can launch the component or access the data it contains.</explanation>
 		<priority>5</priority>
 		<className></className>
@@ -600,19 +675,19 @@
 		<type>4</type>
 	</rule>
 	<rule>
-		<ID>MissingUrlEncode</ID>
-		<briefDescription>Url should be encoded</briefDescription>
-		<explanation>Proper input sanitization can prevent insertion of malicious data into a subsystem such as a database</explanation>
+		<ID>DebugEnable</ID>
+		<briefDescription>Debug is enabled</briefDescription>
+		<explanation>Information written to log files can be of a sensitive nature</explanation>
 		<priority>5</priority>
-		<className>java.net.URL</className>
-		<methodName></methodName>
-		<paramPattern>^([^\(\)])*$</paramPattern>
-		<paramIndex>0</paramIndex>
+		<className></className>
+		<methodName>debuggable</methodName>
+		<paramPattern>true</paramPattern>
+		<paramIndex></paramIndex>
 		<needFix>1</needFix>
-		<fixName>Use java.util.Base64 to encode and decode data</fixName>
-		<fixOld>\((.*?)\)</fixOld>
-		<fixNew>Base64.getUrlEncoder().encodeToString(${oldText}.getBytes())</fixNew>
-		<type>3</type>
+		<fixName>Change to android:debuggable="false"</fixName>
+		<fixOld>true</fixOld>
+		<fixNew>false</fixNew>
+		<type>4</type>
 	</rule>
 	<rule>
 		<ID>ScriptEngineCodeInjection</ID>
@@ -718,5 +793,35 @@
 		<fixOld>writeUnshared</fixOld>
 		<fixNew>writeObject</fixNew>
 		<type>0</type>
+	</rule>
+	<rule>
+		<ID>MissingUrlEncode</ID>
+		<briefDescription>Url should be encoded</briefDescription>
+		<explanation>Proper input sanitization can prevent insertion of malicious data into a subsystem such as a database</explanation>
+		<priority>5</priority>
+		<className>java.net.URL</className>
+		<methodName></methodName>
+		<paramPattern>^([^\(\)])*$</paramPattern>
+		<paramIndex>0</paramIndex>
+		<needFix>1</needFix>
+		<fixName>Use java.util.Base64 to encode and decode data</fixName>
+		<fixOld>\((.*?)\)</fixOld>
+		<fixNew>Base64.getUrlEncoder().encodeToString(${oldText}.getBytes())</fixNew>
+		<type>3</type>
+	</rule>
+	<rule>
+		<ID>HttpProtocol</ID>
+		<briefDescription>Http is not safe</briefDescription>
+		<explanation>Http protocol transfer plaintext</explanation>
+		<priority>5</priority>
+		<className>java.net.URL</className>
+		<methodName></methodName>
+		<paramPattern>(?i)(.*http[^s].*)</paramPattern>
+		<paramIndex>0</paramIndex>
+		<needFix>1</needFix>
+		<fixName>Use https instead</fixName>
+		<fixOld>http</fixOld>
+		<fixNew>https</fixNew>
+		<type>3</type>
 	</rule>
 </rules>
