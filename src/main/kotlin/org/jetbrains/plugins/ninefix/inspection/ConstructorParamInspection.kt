@@ -13,9 +13,8 @@ import java.util.*
 val ConstructorParamIssue: Issue = Issue
         .create(
                 id = "ConstructorParamIssueEntry",
-                briefDescription = "empty",
-                explanation = "empty",
-                category = Category.SECURITY,
+                briefDescription = "",
+                explanation = "",
                 priority = 0,
                 severity = Severity.WARNING,
                 androidSpecific = true,
@@ -80,7 +79,7 @@ class ConstructorParamIssueDetector : Detector(), Detector.UastScanner {
                 id = rule[Config.FIELD_ID],
                 briefDescription = rule[Config.FIELD_briefDescription],
                 explanation = rule[Config.FIELD_explanation],
-                category = Category.CORRECTNESS,
+                category = Category.SECURITY,
                 priority = rule[Config.FIELD_priority].toInt(),
                 severity = Severity.WARNING,
                 androidSpecific = true,

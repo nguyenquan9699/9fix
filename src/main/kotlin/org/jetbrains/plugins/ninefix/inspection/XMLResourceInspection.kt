@@ -14,13 +14,12 @@ val XMLAttributeIssue: Issue = Issue
         id = "XMLResourceIssueEntry",
         briefDescription = "",
         explanation = "",
-        category = Category.CORRECTNESS,
         priority = 0,
         severity = Severity.WARNING,
         androidSpecific = true,
         implementation = Implementation(
             XMLAttributeIssueDetector::class.java,
-            EnumSet.of(Scope.RESOURCE_FILE)
+            EnumSet.of(Scope.MANIFEST)
         )
     )
 
@@ -80,13 +79,13 @@ class XMLAttributeIssueDetector: Detector(), Detector.XmlScanner {
             id = rule[Config.FIELD_ID],
             briefDescription = rule[Config.FIELD_briefDescription],
             explanation = rule[Config.FIELD_explanation],
-            category = Category.CORRECTNESS,
+            category = Category.SECURITY,
             priority = rule[Config.FIELD_priority].toInt(),
             severity = Severity.WARNING,
             androidSpecific = true,
             implementation = Implementation(
                 detector::class.java,
-                EnumSet.of(Scope.RESOURCE_FILE)
+                EnumSet.of(Scope.MANIFEST)
             )
         )
     }
