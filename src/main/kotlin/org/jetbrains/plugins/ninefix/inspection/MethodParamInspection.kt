@@ -41,7 +41,7 @@ class MethodParamInspection : AndroidLintInspectionBase("Method Parameter Inspec
 }
 
 class MethodParamIssueDetector : Detector(), Detector.UastScanner {
-    private val rules = Helper.loadRules(Config.PATH, Config.TYPE_METHOD_PARAM)
+    private val rules = Helper.loadRules(Config.PATH, Config.TYPE_METHOD_PARAM, Config.TYPE_METHOD_PARAM_STR)
 
     override fun getApplicableMethodNames(): List<String> {
         return Helper.getField(rules, Config.FIELD_meThodName)

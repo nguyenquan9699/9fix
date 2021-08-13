@@ -14,7 +14,7 @@ class RulesEditorForm : DialogWrapper(true) {
     @Nullable
 
     val panel = JPanel(BorderLayout())
-    private val dataList = Helper.loadRules(Config.PATH, "")
+    private val dataList = Helper.loadRules(Config.PATH, "", "")
     private val dataArray = Helper.convertListListToArrayArray(dataList)
     private val columns = Config.FIELD_NAMES
     var tableModel = DefaultTableModel(dataArray, columns)

@@ -40,7 +40,7 @@ class XMLResourceInspection : AndroidLintInspectionBase("Xml Resource Inspection
 }
 
 class XMLAttributeIssueDetector: Detector(), Detector.XmlScanner {
-    private val rules = Helper.loadRules(Config.PATH,Config.TYPE_XMLAttribute)
+    private val rules = Helper.loadRules(Config.PATH, Config.TYPE_XMLAttribute, Config.TYPE_XMLAttribute_STR)
 
     override fun getApplicableAttributes(): Collection<String> {
         return Helper.getField(rules, Config.FIELD_XMLAttribute)

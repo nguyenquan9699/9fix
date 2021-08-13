@@ -41,7 +41,7 @@ class ConstructorInspection : AndroidLintInspectionBase("Constructor Inspection"
 }
 
 class ConstructorIssueDetector: Detector(), Detector.UastScanner {
-    private val rules = Helper.loadRules(Config.PATH, Config.TYPE_CONSTRUCTOR)
+    private val rules = Helper.loadRules(Config.PATH, Config.TYPE_CONSTRUCTOR, Config.TYPE_CONSTRUCTOR_STR)
 
     override fun getApplicableConstructorTypes(): List<String> {
         return Helper.getField(rules, Config.FIELD_className)

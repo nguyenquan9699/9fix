@@ -41,7 +41,7 @@ class MethodInspection : AndroidLintInspectionBase("Method Inspection", MethodIs
 }
 
 class MethodIssueDetector : Detector(), Detector.UastScanner {
-    private val rules = Helper.loadRules(Config.PATH, Config.TYPE_METHOD)
+    private val rules = Helper.loadRules(Config.PATH, Config.TYPE_METHOD, Config.TYPE_METHOD_STR)
 
     override fun getApplicableMethodNames(): List<String> {
         return Helper.getField(rules, Config.FIELD_meThodName)

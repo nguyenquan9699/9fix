@@ -18,7 +18,7 @@ class Helper {
             return res.distinct()
         }
 
-        fun loadRules(path: String, type: String): List<List<String>>{
+        fun loadRules(path: String, type: String, typeStr: String): List<List<String>>{
             val res: MutableList<List<String>> = mutableListOf()
             val item: MutableList<String> = mutableListOf()
             val inputStream = File(path).inputStream()
@@ -42,7 +42,7 @@ class Helper {
                     }
                     XmlPullParser.END_TAG -> {
                         if (tagname.equals("rule", ignoreCase = true)) {
-                            if (item[Config.FIELD_type] == type || type == "") {
+                            if (item[Config.FIELD_type] == type || item[Config.FIELD_type] == typeStr || type == "") {
                                 res.add(item.toList())
                             }
                         } else {

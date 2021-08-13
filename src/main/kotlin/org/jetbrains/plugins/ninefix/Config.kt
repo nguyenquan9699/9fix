@@ -21,10 +21,15 @@ class Config {
         const val FIELD_fixNew = 11
         const val FIELD_type = 12
         const val TYPE_METHOD = "0"
+        const val TYPE_METHOD_STR = "METHOD"
         const val TYPE_METHOD_PARAM = "1"
+        const val TYPE_METHOD_PARAM_STR = "METHOD_PARAM"
         const val TYPE_CONSTRUCTOR = "2"
+        const val TYPE_CONSTRUCTOR_STR = "CONSTRUCTOR"
         const val TYPE_CONSTRUCTOR_PARAM = "3"
+        const val TYPE_CONSTRUCTOR_PARAM_STR = "CONSTRUCTOR_PARAM"
         const val TYPE_XMLAttribute = "4"
+        const val TYPE_XMLAttribute_STR = "XMLATTRIBUTE"
         val FIELD_NAMES = arrayOf("ID", "briefDescription", "explanation", "priority", "className", "methodName", "paramPattern", "paramIndex", "needFix", "fixName", "fixOld", "fixNew", "type")
         const val ACTION_SIZE_WIDTH = 1000
         const val ACTION_SIZE_HEIGHT = 500
