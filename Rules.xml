@@ -12,7 +12,7 @@
 		<fixName>Improve security by using AES/GCM/NoPadding</fixName>
 		<fixOld>(AES)</fixOld>
 		<fixNew>AES/GCM/NoPadding</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>CipherGetInstance</ID>
@@ -27,7 +27,7 @@
 		<fixName>Improve security by using AES/GCM/NoPadding</fixName>
 		<fixOld>(AES\/ECB)</fixOld>
 		<fixNew>AES/GCM/NoPadding</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>CipherGetInstance</ID>
@@ -42,7 +42,7 @@
 		<fixName>Improve security by using AES/GCM/NoPadding</fixName>
 		<fixOld>(Blowfish\/ECB\/PKCS5Padding)</fixOld>
 		<fixNew>AES/GCM/NoPadding</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>CipherGetInstance</ID>
@@ -57,7 +57,7 @@
 		<fixName>Improve security by using AES/GCM/NoPadding</fixName>
 		<fixOld>(DES\/ECB\/PKCS5Padding)</fixOld>
 		<fixNew>AES/GCM/NoPadding</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>CipherGetInstance</ID>
@@ -72,7 +72,7 @@
 		<fixName>Improve security by using AES/GCM/NoPadding</fixName>
 		<fixOld>(AES\/CBC\/PKCS5Padding)</fixOld>
 		<fixNew>AES/GCM/NoPadding</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>CipherGetInstance</ID>
@@ -87,7 +87,7 @@
 		<fixName>Improve security by using AES/GCM/NoPadding</fixName>
 		<fixOld>(Blowfish\/CBC\/PKCS5Padding)</fixOld>
 		<fixNew>AES/GCM/NoPadding</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>CipherGetInstance</ID>
@@ -102,7 +102,7 @@
 		<fixName>Improve security by using AES/GCM/NoPadding</fixName>
 		<fixOld>(DES\/CBC\/PKCS5Padding)</fixOld>
 		<fixNew>AES/GCM/NoPadding</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>CipherGetInstance</ID>
@@ -117,7 +117,7 @@
 		<fixName>Improve security by using AES/GCM/NoPadding</fixName>
 		<fixOld>(AES\/CBC\/PKCS7Padding)</fixOld>
 		<fixNew>AES/GCM/NoPadding</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>CipherGetInstance</ID>
@@ -132,7 +132,7 @@
 		<fixName>Improve security by using AES/GCM/NoPadding</fixName>
 		<fixOld>(Blowfish\/CBC\/PKCS7Padding)</fixOld>
 		<fixNew>AES/GCM/NoPadding</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>CipherGetInstance</ID>
@@ -147,7 +147,7 @@
 		<fixName>Improve security by using AES/GCM/NoPadding</fixName>
 		<fixOld>(DES\/CBC\/PKCS7Padding)</fixOld>
 		<fixNew>AES/GCM/NoPadding</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>CipherGetInstance</ID>
@@ -162,7 +162,7 @@
 		<fixName>Improve security by using AES/GCM/NoPadding</fixName>
 		<fixOld>(DES)</fixOld>
 		<fixNew>AES/GCM/NoPadding</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>CipherGetInstance</ID>
@@ -177,7 +177,7 @@
 		<fixName>Improve security by using AES/GCM/NoPadding</fixName>
 		<fixOld>(DESede)</fixOld>
 		<fixNew>AES/GCM/NoPadding</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>CipherGetInstance</ID>
@@ -192,7 +192,7 @@
 		<fixName>Improve security by using AES/GCM/NoPadding</fixName>
 		<fixOld>(RC2)</fixOld>
 		<fixNew>AES/GCM/NoPadding</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>CipherGetInstance</ID>
@@ -207,7 +207,7 @@
 		<fixName>Improve security by using AES/GCM/NoPadding</fixName>
 		<fixOld>(RC4)</fixOld>
 		<fixNew>AES/GCM/NoPadding</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>CipherGetInstance</ID>
@@ -222,7 +222,7 @@
 		<fixName>Improve security by using AES/GCM/NoPadding</fixName>
 		<fixOld>(Blowfish)</fixOld>
 		<fixNew>AES/GCM/NoPadding</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>CipherGetInstance</ID>
@@ -237,7 +237,7 @@
 		<fixName>Improve security by using RSA/None/OAEPWITHSHA-256ANDMGF1PADDING</fixName>
 		<fixOld>(RSA\/NONE\/NoPadding)</fixOld>
 		<fixNew>RSA/None/OAEPWITHSHA-256ANDMGF1PADDING</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>SensitiveDataLoggingW</ID>
@@ -249,10 +249,10 @@
 		<paramPattern>(.*pass.*)|(.*pw.*)</paramPattern>
 		<paramIndex>1</paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>1</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>SensitiveDataLoggingD</ID>
@@ -264,10 +264,10 @@
 		<paramPattern>(.*pass.*)|(.*pw.*)</paramPattern>
 		<paramIndex>1</paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>1</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>SensitiveDataLoggingE</ID>
@@ -279,10 +279,10 @@
 		<paramPattern>(.*pass.*)|(.*pw.*)</paramPattern>
 		<paramIndex>1</paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>1</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>SensitiveDataLoggingI</ID>
@@ -294,10 +294,10 @@
 		<paramPattern>(.*pass.*)|(.*pw.*)</paramPattern>
 		<paramIndex>1</paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>1</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>SensitiveDataLoggingV</ID>
@@ -309,10 +309,10 @@
 		<paramPattern>(.*pass.*)|(.*pw.*)</paramPattern>
 		<paramIndex>1</paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>1</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>KeyPairInit</ID>
@@ -327,7 +327,7 @@
 		<fixName>Improve security</fixName>
 		<fixOld>(1024)</fixOld>
 		<fixNew>2048</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>KeyInit</ID>
@@ -342,7 +342,7 @@
 		<fixName>Improve security</fixName>
 		<fixOld>(64)</fixOld>
 		<fixNew>128</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>ECGenParameterSpec</ID>
@@ -350,14 +350,14 @@
 		<explanation>Cryptographic keys should be rubust</explanation>
 		<priority>5</priority>
 		<className>java.security.spec.ECGenParameterSpec</className>
-		<methodName></methodName>
+		<methodName> </methodName>
 		<paramPattern>(secp112r1)</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>1</needFix>
 		<fixName>Improve security</fixName>
 		<fixOld>(secp112r1)</fixOld>
 		<fixNew>secp224k1</fixNew>
-		<type>3</type>
+		<type>CONSTRUCTOR_PARAM</type>
 	</rule>
 	<rule>
 		<ID>DriverManagerGetConnection</ID>
@@ -372,7 +372,7 @@
 		<fixName>Improve security</fixName>
 		<fixOld>()</fixOld>
 		<fixNew>secur3P@ssw0rd</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>PasswordEncoder</ID>
@@ -380,14 +380,14 @@
 		<explanation>Passwords should not be stored in plain-text or with a fast hashing algorithm</explanation>
 		<priority>5</priority>
 		<className>org.springframework.security.crypto.password.StandardPasswordEncoder</className>
-		<methodName></methodName>
-		<paramPattern></paramPattern>
+		<methodName> </methodName>
+		<paramPattern> </paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>1</needFix>
 		<fixName>Improve security</fixName>
 		<fixOld>(StandardPasswordEncoder)</fixOld>
 		<fixNew>BCryptPasswordEncoder</fixNew>
-		<type>2</type>
+		<type>CONSTRUCTOR</type>
 	</rule>
 	<rule>
 		<ID>SecureRandomSeed</ID>
@@ -395,14 +395,14 @@
 		<explanation>"SecureRandom" seeds should not be predictable</explanation>
 		<priority>5</priority>
 		<className>java.security.SecureRandom</className>
-		<methodName></methodName>
+		<methodName> </methodName>
 		<paramPattern>(.*)</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>1</needFix>
 		<fixName>Improve security</fixName>
 		<fixOld>(SecureRandom.*)</fixOld>
 		<fixNew>SecureRandom()</fixNew>
-		<type>3</type>
+		<type>CONSTRUCTOR_PARAM</type>
 	</rule>
 	<rule>
 		<ID>SecureRandomSeed</ID>
@@ -410,14 +410,14 @@
 		<explanation>"SecureRandom" seeds should not be predictable</explanation>
 		<priority>5</priority>
 		<className>java.security.SecureRandom</className>
-		<methodName></methodName>
+		<methodName> </methodName>
 		<paramPattern>(.*setSeed.*)</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>1</needFix>
 		<fixName>Improve security</fixName>
 		<fixOld>(.*setSeed.*)</fixOld>
-		<fixNew></fixNew>
-		<type>0</type>
+		<fixNew> </fixNew>
+		<type>METHOD</type>
 	</rule>
 	<rule>
 		<ID>SSLContext</ID>
@@ -432,7 +432,7 @@
 		<fixName>Improve security by using TLSv1.2</fixName>
 		<fixOld>(SSLv3)</fixOld>
 		<fixNew>TLSv1.2</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>NullCipher</ID>
@@ -440,14 +440,14 @@
 		<explanation>NullCipher should not be used</explanation>
 		<priority>5</priority>
 		<className>javax.crypto.NullCipher</className>
-		<methodName></methodName>
-		<paramPattern></paramPattern>
+		<methodName> </methodName>
+		<paramPattern> </paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>2</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>CONSTRUCTOR</type>
 	</rule>
 	<rule>
 		<ID>MessageDigest</ID>
@@ -462,7 +462,7 @@
 		<fixName>Improve security by using SHA256</fixName>
 		<fixOld>(SHA1)</fixOld>
 		<fixNew>SHA-256</fixNew>
-		<type>1</type>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>PredictableRandom</ID>
@@ -470,14 +470,14 @@
 		<explanation>The use of a predictable random value can lead to vulnerabilities</explanation>
 		<priority>5</priority>
 		<className>java.util.Random</className>
-		<methodName></methodName>
-		<paramPattern></paramPattern>
-		<paramIndex></paramIndex>
+		<methodName> </methodName>
+		<paramPattern> </paramPattern>
+		<paramIndex> </paramIndex>
 		<needFix>1</needFix>
 		<fixName>Use SecureRandom</fixName>
 		<fixOld>Random[^~]*Random[(][)]</fixOld>
 		<fixNew>SecureRandom ${oldText} = new SecureRandom();\nbyte[] result = new byte[32];\n${oldText}.nextBytes(result)</fixNew>
-		<type>2</type>
+		<type>CONSTRUCTOR</type>
 	</rule>
 	<rule>
 		<ID>PathTraversalPotential</ID>
@@ -485,14 +485,14 @@
 		<explanation>A path traversal attack (also known as directory traversal) aims to access files and directories that are stored outside the root folder</explanation>
 		<priority>5</priority>
 		<className>java.io.File</className>
-		<methodName></methodName>
+		<methodName> </methodName>
 		<paramPattern>(^\".*\"$)</paramPattern>
 		<paramIndex>1</paramIndex>
 		<needFix>1</needFix>
 		<fixName>Add path traversal filter</fixName>
 		<fixOld>,(.*?)\)</fixOld>
 		<fixNew>${oldText}.substring(${oldText}.lastIndexOf("/"))</fixNew>
-		<type>3</type>
+		<type>CONSTRUCTOR_PARAM</type>
 	</rule>
 	<rule>
 		<ID>CommandInjectionPotential</ID>
@@ -504,10 +504,10 @@
 		<paramPattern>^.*\+.*$</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>1</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>UntrustedServletContentType</ID>
@@ -516,13 +516,13 @@
 		<priority>5</priority>
 		<className>javax.servlet.http.HttpServletRequest</className>
 		<methodName>getContentType</methodName>
-		<paramPattern></paramPattern>
-		<paramIndex></paramIndex>
+		<paramPattern> </paramPattern>
+		<paramIndex> </paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>0</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>METHOD</type>
 	</rule>
 	<rule>
 		<ID>UntrustedServletContentType (HttpServletRequestWrapper)</ID>
@@ -531,13 +531,13 @@
 		<priority>5</priority>
 		<className>javax.servlet.http.HttpServletRequestWrapper</className>
 		<methodName>getContentType</methodName>
-		<paramPattern></paramPattern>
-		<paramIndex></paramIndex>
+		<paramPattern> </paramPattern>
+		<paramIndex> </paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>0</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>METHOD</type>
 	</rule>
 	<rule>
 		<ID>UntrustedServletServerName</ID>
@@ -546,13 +546,13 @@
 		<priority>5</priority>
 		<className>javax.servlet.http.HttpServletRequest</className>
 		<methodName>getServerName</methodName>
-		<paramPattern></paramPattern>
-		<paramIndex></paramIndex>
+		<paramPattern> </paramPattern>
+		<paramIndex> </paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>0</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>METHOD</type>
 	</rule>
 	<rule>
 		<ID>UntrustedServletServerName (HttpServletRequestWrapper)</ID>
@@ -561,13 +561,13 @@
 		<priority>5</priority>
 		<className>javax.servlet.http.HttpServletRequestWrapper</className>
 		<methodName>getServerName</methodName>
-		<paramPattern></paramPattern>
-		<paramIndex></paramIndex>
+		<paramPattern> </paramPattern>
+		<paramIndex> </paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>0</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>METHOD</type>
 	</rule>
 	<rule>
 		<ID>UntrustedServletSessionId</ID>
@@ -576,13 +576,13 @@
 		<priority>5</priority>
 		<className>javax.servlet.http.HttpServletRequest</className>
 		<methodName>getSession</methodName>
-		<paramPattern></paramPattern>
-		<paramIndex></paramIndex>
+		<paramPattern> </paramPattern>
+		<paramIndex> </paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>0</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>METHOD</type>
 	</rule>
 	<rule>
 		<ID>UntrustedServletSessionId (HttpServletRequestWrapper)</ID>
@@ -591,13 +591,13 @@
 		<priority>5</priority>
 		<className>javax.servlet.http.HttpServletRequestWrapper</className>
 		<methodName>getSession</methodName>
-		<paramPattern></paramPattern>
-		<paramIndex></paramIndex>
+		<paramPattern> </paramPattern>
+		<paramIndex> </paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>0</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>METHOD</type>
 	</rule>
 	<rule>
 		<ID>UntrustedServletSessionId</ID>
@@ -606,13 +606,13 @@
 		<priority>5</priority>
 		<className>javax.servlet.http.HttpServletRequest</className>
 		<methodName>getRequestedSessionId</methodName>
-		<paramPattern></paramPattern>
-		<paramIndex></paramIndex>
+		<paramPattern> </paramPattern>
+		<paramIndex> </paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>0</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>METHOD</type>
 	</rule>
 	<rule>
 		<ID>UntrustedServletSessionId (HttpServletRequestWrapper)</ID>
@@ -621,13 +621,13 @@
 		<priority>5</priority>
 		<className>javax.servlet.http.HttpServletRequestWrapper</className>
 		<methodName>getRequestedSessionId</methodName>
-		<paramPattern></paramPattern>
-		<paramIndex></paramIndex>
+		<paramPattern> </paramPattern>
+		<paramIndex> </paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>0</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>METHOD</type>
 	</rule>
 	<rule>
 		<ID>UntrustedServletQueryString</ID>
@@ -636,13 +636,13 @@
 		<priority>5</priority>
 		<className>javax.servlet.http.HttpServletRequest</className>
 		<methodName>getQueryString</methodName>
-		<paramPattern></paramPattern>
-		<paramIndex></paramIndex>
+		<paramPattern> </paramPattern>
+		<paramIndex> </paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>0</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>METHOD</type>
 	</rule>
 	<rule>
 		<ID>UntrustedServletQueryString (HttpServletRequestWrapper)</ID>
@@ -651,43 +651,43 @@
 		<priority>5</priority>
 		<className>javax.servlet.http.HttpServletRequestWrapper</className>
 		<methodName>getQueryString</methodName>
-		<paramPattern></paramPattern>
-		<paramIndex></paramIndex>
+		<paramPattern> </paramPattern>
+		<paramIndex> </paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>0</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>METHOD</type>
 	</rule>
 	<rule>
 		<ID>AndroidExportedComponent</ID>
 		<briefDescription>Exported Component</briefDescription>
 		<explanation>The Android application exports a component for use by other applications, but does not properly restrict which applications can launch the component or access the data it contains.</explanation>
 		<priority>5</priority>
-		<className></className>
+		<className> </className>
 		<methodName>exported</methodName>
 		<paramPattern>true</paramPattern>
-		<paramIndex></paramIndex>
+		<paramIndex> </paramIndex>
 		<needFix>1</needFix>
 		<fixName>Change to android:exported="false"</fixName>
 		<fixOld>true</fixOld>
 		<fixNew>false</fixNew>
-		<type>4</type>
+		<type>XMLATTRIBUTE</type>
 	</rule>
 	<rule>
 		<ID>DebugEnable</ID>
 		<briefDescription>Debug is enabled</briefDescription>
 		<explanation>Information written to log files can be of a sensitive nature</explanation>
 		<priority>5</priority>
-		<className></className>
+		<className> </className>
 		<methodName>debuggable</methodName>
 		<paramPattern>true</paramPattern>
-		<paramIndex></paramIndex>
+		<paramIndex> </paramIndex>
 		<needFix>1</needFix>
 		<fixName>Change to android:debuggable="false"</fixName>
 		<fixOld>true</fixOld>
 		<fixNew>false</fixNew>
-		<type>4</type>
+		<type>XMLATTRIBUTE</type>
 	</rule>
 	<rule>
 		<ID>ScriptEngineCodeInjection</ID>
@@ -699,10 +699,10 @@
 		<paramPattern>^.*\+.*$</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>1</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>XPathInjection</ID>
@@ -714,10 +714,10 @@
 		<paramPattern>^.*\+.*$</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>1</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>PatternLoad</ID>
@@ -726,13 +726,13 @@
 		<priority>0</priority>
 		<className>java.util.regex.Pattern</className>
 		<methodName>compile</methodName>
-		<paramPattern></paramPattern>
-		<paramIndex></paramIndex>
+		<paramPattern> </paramPattern>
+		<paramIndex> </paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>0</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>METHOD</type>
 	</rule>
 	<rule>
 		<ID>PreventArbitraryFileUpload</ID>
@@ -744,10 +744,10 @@
 		<paramPattern>(.*up.*)|(.*load.*)</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>1</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>METHOD_PARAM</type>
 	</rule>
 	<rule>
 		<ID>SensitiveCookie</ID>
@@ -755,14 +755,14 @@
 		<explanation>Do not store unencrypted sensitive information on the client side</explanation>
 		<priority>5</priority>
 		<className>java.net.HttpCookie</className>
-		<methodName></methodName>
+		<methodName> </methodName>
 		<paramPattern>(.*pass.*)|(.*pw.*)|(.*private.*)</paramPattern>
 		<paramIndex>1</paramIndex>
 		<needFix>0</needFix>
-		<fixName></fixName>
-		<fixOld></fixOld>
-		<fixNew></fixNew>
-		<type>3</type>
+		<fixName> </fixName>
+		<fixOld> </fixOld>
+		<fixNew> </fixNew>
+		<type>CONSTRUCTOR_PARAM</type>
 	</rule>
 	<rule>
 		<ID>ReadUnshared</ID>
@@ -771,13 +771,13 @@
 		<priority>5</priority>
 		<className>java.io.ObjectInputStream</className>
 		<methodName>readUnshared</methodName>
-		<paramPattern></paramPattern>
-		<paramIndex></paramIndex>
+		<paramPattern> </paramPattern>
+		<paramIndex> </paramIndex>
 		<needFix>1</needFix>
 		<fixName>Use readObject() to ensure that the object referred to only one target</fixName>
 		<fixOld>readUnshared</fixOld>
 		<fixNew>readObject</fixNew>
-		<type>0</type>
+		<type>METHOD</type>
 	</rule>
 	<rule>
 		<ID>WriteUnshared</ID>
@@ -786,13 +786,13 @@
 		<priority>5</priority>
 		<className>java.io.ObjectOutputStream</className>
 		<methodName>writeUnshared</methodName>
-		<paramPattern></paramPattern>
-		<paramIndex></paramIndex>
+		<paramPattern> </paramPattern>
+		<paramIndex> </paramIndex>
 		<needFix>1</needFix>
 		<fixName>Use writeObject() to ensure that the object referred to only one target</fixName>
 		<fixOld>writeUnshared</fixOld>
 		<fixNew>writeObject</fixNew>
-		<type>0</type>
+		<type>METHOD</type>
 	</rule>
 	<rule>
 		<ID>MissingUrlEncode</ID>
@@ -800,14 +800,14 @@
 		<explanation>Proper input sanitization can prevent insertion of malicious data into a subsystem such as a database</explanation>
 		<priority>5</priority>
 		<className>java.net.URL</className>
-		<methodName></methodName>
+		<methodName> </methodName>
 		<paramPattern>^([^\(\)])*$</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>1</needFix>
 		<fixName>Use java.util.Base64 to encode and decode data</fixName>
 		<fixOld>\((.*?)\)</fixOld>
 		<fixNew>Base64.getUrlEncoder().encodeToString(${oldText}.getBytes())</fixNew>
-		<type>3</type>
+		<type>CONSTRUCTOR_PARAM</type>
 	</rule>
 	<rule>
 		<ID>HttpProtocol</ID>
@@ -815,13 +815,13 @@
 		<explanation>Http protocol transfer plaintext</explanation>
 		<priority>5</priority>
 		<className>java.net.URL</className>
-		<methodName></methodName>
+		<methodName> </methodName>
 		<paramPattern>(?i)(.*http[^s].*)</paramPattern>
 		<paramIndex>0</paramIndex>
 		<needFix>1</needFix>
 		<fixName>Use https instead</fixName>
 		<fixOld>http</fixOld>
 		<fixNew>https</fixNew>
-		<type>3</type>
+		<type>CONSTRUCTOR_PARAM</type>
 	</rule>
 </rules>
